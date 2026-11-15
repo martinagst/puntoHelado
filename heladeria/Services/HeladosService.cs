@@ -33,10 +33,7 @@ public class HeladosService
         Salsa = h.Salsa?.Gusto,
         Sabores = h.HeladoSabores.Select(hs => hs.Sabor.Nombre).ToList(),
     };
-    public async Task<List<HeladoDTO>> ObtenerTodos()
-    {
-        return (await _repo.ObtenerTodos(includePaths: _incluir)).Select(ADto).ToList();
-    }
+    public async Task<List<HeladoDTO>> ObtenerTodos() => (await _repo.ObtenerTodos(includePaths: _incluir)).Select(ADto).ToList();
 
     public async Task<Helado> ObtenerUnoPorId(int id)
     {
