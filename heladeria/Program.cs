@@ -22,7 +22,7 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new()
     {
-        Title = "Heladeria puntoHelado",
+        Title = "Heladeria JScream",
         Version = "v1"
     });
 
