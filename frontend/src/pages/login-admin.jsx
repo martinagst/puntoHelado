@@ -24,8 +24,6 @@ export default function LoginAdmin() {
 
     try {
       setCargando(true);
-
-     
       const respuesta = await iniciarSesion({
         usuario: usuario,
         clave: clave,
@@ -63,7 +61,6 @@ export default function LoginAdmin() {
 
   return (
     <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-[#FFF3FB] via-[#F3F0FF] to-[#E6FBFF] p-6">
-
       <div className="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-[#E03EB4]/20 blur-3xl" />
       <div className="absolute -bottom-32 -right-24 h-[28rem] w-[28rem] rounded-full bg-[#34E5FF]/20 blur-3xl" />
 

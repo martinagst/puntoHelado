@@ -156,9 +156,7 @@ export default function Bienvenida() {
         
           <form
             onSubmit={manejarInicioSesion}
-            className="w-full max-w-md flex flex-col gap-4 mt-3"
-          >
-
+            className="w-full max-w-md flex flex-col gap-4 mt-3">
             <div className="flex flex-col gap-2">
               <label className="font-semibold text-[#2B1055]">
                 Nombre de usuario
@@ -194,7 +192,6 @@ export default function Bienvenida() {
                 {error}
               </p>
             )}
-
             {mensajeRegistro && (
               <p className="text-sm text-green-700 text-center font-semibold">
                 {mensajeRegistro}
@@ -204,11 +201,9 @@ export default function Bienvenida() {
             <button
               type="submit"
               disabled={cargando}
-              className="bg-[#F8F272] text-[#2B1055] border-2 border-[#2B1055] px-10 py-4 rounded-full font-bold text-lg shadow-[4px_4px_0_#2B1055] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#2B1055] transition-all disabled:opacity-50"
-            >
+              className="bg-[#F8F272] text-[#2B1055] border-2 border-[#2B1055] px-10 py-4 rounded-full font-bold text-lg shadow-[4px_4px_0_#2B1055] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#2B1055] transition-all disabled:opacity-50">
               {cargando ? "Ingresando..." : "Entrar"}
             </button>
-
           </form>
 
           <p className="text-[#2B1055]/80">
@@ -220,12 +215,10 @@ export default function Bienvenida() {
                 setMensajeRegistro("");
                 setMostrarRegistro(true);
               }}
-              className="font-bold text-[#E03EB4] hover:underline"
-            >
+              className="font-bold text-[#E03EB4] hover:underline">
               Registrate
             </button>
           </p>
-
         </div>
 
         
@@ -238,15 +231,12 @@ export default function Bienvenida() {
             className="relative w-72 md:w-[440px] max-h-[80vh] object-contain drop-shadow-2xl"
           />
         </div>
-
       </section>
 
       
       {mostrarRegistro && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#2B1055]/50 backdrop-blur-sm p-4">
-
           <div className="relative w-full max-w-md rounded-3xl border-2 border-[#B47AEA]/40 bg-white p-8 shadow-2xl">
-
             
             <button
               type="button"
@@ -255,8 +245,7 @@ export default function Bienvenida() {
                 setError("");
               }}
               className="absolute left-5 top-5 text-2xl font-bold text-[#2B1055] hover:text-[#E03EB4]"
-              aria-label="Volver al inicio de sesión"
-            >
+              aria-label="Volver al inicio de sesión">
               ←
             </button>
 
@@ -272,9 +261,7 @@ export default function Bienvenida() {
 
             <form
               onSubmit={manejarRegistro}
-              className="flex flex-col gap-5"
-            >
-
+              className="flex flex-col gap-5">
               <div className="flex flex-col gap-2">
                 <label className="font-semibold text-[#2B1055]">
                   Nombre de usuario
@@ -316,8 +303,7 @@ export default function Bienvenida() {
               <button
                 type="submit"
                 disabled={cargando}
-                className="w-full rounded-xl bg-[#E03EB4] py-3 font-bold text-white shadow-md transition hover:bg-[#C92B9D] disabled:opacity-50"
-              >
+                className="w-full rounded-xl bg-[#E03EB4] py-3 font-bold text-white shadow-md transition hover:bg-[#C92B9D] disabled:opacity-50">
                 {cargando ? "Registrando..." : "Registrar"}
               </button>
 
@@ -329,24 +315,13 @@ export default function Bienvenida() {
                 setMostrarRegistro(false);
                 setError("");
               }}
-              className="mt-5 w-full text-center font-semibold text-[#7B3FC6] hover:underline"
-            >
+              className="mt-5 w-full text-center font-semibold text-[#7B3FC6] hover:underline">
               ← Volver al inicio de sesión
             </button>
 
           </div>
         </div>
       )}
-
-      {/*Acceso de admin*/}
-      <button
-        type="button"
-        onClick={() => setLocation("/login-admin")}
-        className="absolute bottom-4 right-5 z-20 text-sm font-semibold text-[#2B1055]/50 hover:text-[#E03EB4]"
-      >
-        Administración
-      </button>
-
     </div>
   );
 }
