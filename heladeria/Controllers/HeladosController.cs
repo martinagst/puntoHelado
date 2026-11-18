@@ -83,7 +83,6 @@ namespace heladeria.Controllers
 
         [HttpPost]
         [ProducesResponseType(typeof(Respuesta), StatusCodes.Status201Created)]
-        [AllowAnonymous]
         public async Task<ActionResult<Respuesta>> CrearUnHelado([FromBody] CrearHeladoDTO crearDto)
         {
             try
